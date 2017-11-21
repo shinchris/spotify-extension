@@ -2,7 +2,7 @@
 
 // Wrap everything in an anonymous function to avoid polluting the global namespace
 (function() {
-  var token = '';
+  var token = 'BQCwaFh_XzpYBpaOF4gqD2-J_pXbYU3TP8Hik492t4gpfxCkItjWoW0PnxcvXr39OsLdZmFf3h19p5ZW1TJ7jZ3lab_KB7fv0NgBRgwBOFAvo5R9Eil86OUqP1ReDfuBKHuGhzGVWwtrYOgKRO7bhneWUxA_LeZ0fKpgNzVbSF3CgQ';
 
   var spotifyApi = new SpotifyWebApi();
   var user;

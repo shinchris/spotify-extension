@@ -1,0 +1,36 @@
+{
+	"name": "spotify-extension",
+	"version": "0.0.1",
+	"descriptions": "Sample extension to use with Tableau and Spotify.",
+	"scripts": {
+		"start": "node node_modules/http-server/bin/http-server -p 8457",
+		"lint": "semistandard"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shinchris/spotify-extension.git"
+	},
+	"author": "shinchris",
+	"license": "MIT",
+	"dependencies": {
+		"http-server": "^0.9.0"
+	},
+	"devDependencies": {
+		"semistandard": "^11.0.0"
+	},
+	"semistandard": {
+		"env": {
+			"jquery": true,
+			"browser": true,
+			"tableau": true
+		},
+		"globals": [
+			"tableau"
+		],
+		"ignore": [
+			"/lib",
+			"/docs",
+			"tableau-*.js"
+		]
+	}
+}
