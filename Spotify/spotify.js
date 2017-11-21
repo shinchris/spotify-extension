@@ -2,7 +2,8 @@
 
 // Wrap everything in an anonymous function to avoid polluting the global namespace
 (function() {
-	var token = "BQD7DHWDbdWuf8F748_H1oKwPj8bAUfcmLikPDi_5UQsaREIvOTWBpevT1Pu4ruv4vrahqrrLGgaMBxKnxX6hI4xj1HE7SkyfGIsUGNUtsuN3coauUjnHCPpQjqYakkd-syQ94_mTF7LOU1IKJKzfxuLPlwGYcM9CdnCpGFVu1G6WA";
+  var token = '';
+
   var spotifyApi = new SpotifyWebApi();
   var user;
   var allData;
@@ -91,7 +92,7 @@
     return -1;
   }
 
-	function showChooseSheetDialog () {
+  function showChooseSheetDialog () {
     // Clear out the existing list of sheets
     $('#choose_sheet_buttons').empty();
 
