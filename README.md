@@ -22,8 +22,7 @@ var token = '';
 
 4. Make sure you're in the `.\spotify-extension` directory.
 
-5. Start a simple file hosting server:
-		* Node.js : First run `npm install` (only the first time) then `npm start`.
+5. Run `npm install` (only the first time), then `npm start`.
 
 6. Launch the pre-release version of Tableau Desktop. Create a new dashboard, and you should now be able to drag and drop the Spotify extension.
 
