@@ -6,7 +6,7 @@ With this extension, you can create playlists based on datapoints you select fro
 More improvements to come in the future.
 
 ## Requirements
-1. Spotify data - obtainable by using this [tool](https://github.com/avertin/spotify_data).
+1. Spotify data - obtainable by using this awesome [tool](https://github.com/avertin/spotify_data).
 2. Pre-Release version of Tableau Desktop and [Tableau Extensions API](https://github.com/tableau/extensions-api) - follow all steps for install and setup on [this page](https://tableau.github.io/extensions-api/docs/trex_getstarted.html).
 
 ## Instructions
