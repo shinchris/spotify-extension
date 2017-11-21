@@ -2,7 +2,7 @@
 
 // Wrap everything in an anonymous function to avoid polluting the global namespace
 (function() {
-  var token = 'BQCwaFh_XzpYBpaOF4gqD2-J_pXbYU3TP8Hik492t4gpfxCkItjWoW0PnxcvXr39OsLdZmFf3h19p5ZW1TJ7jZ3lab_KB7fv0NgBRgwBOFAvo5R9Eil86OUqP1ReDfuBKHuGhzGVWwtrYOgKRO7bhneWUxA_LeZ0fKpgNzVbSF3CgQ';
+  var token = '';
 
   var spotifyApi = new SpotifyWebApi();
   var user;
@@ -10,25 +10,32 @@
 
   // Use the jQuery document ready signal to know when everything has been initialized
   $(document).ready(function () {
-    // Tell Tableau we'd like to initialize our extension
-    tableau.extensions.initializeAsync().then(function () {
-      // Once the extension is initialized, ask the user to choose a sheet
-      showChooseSheetDialog();
-      initializeButtons();
-    });
     // Initialize spotify web api with token
+    if (!SpotifyAuthentication.hasTokens()) {
+      console.log("We do not have SpotifyAuthentication tokens available");
+      window.location.href = "/login";
+    } else {
+      console.log("Access token found! " + SpotifyAuthentication.getAccessToken());
+      token = SpotifyAuthentication.getAccessToken();
+    }
     spotifyApi.setAccessToken(token);
 
     spotifyApi.getMe([], function(err, data) {
       if (err) {
         console.error(err);
-        alert("Error connecting to Spotify. Most likely due to an expired oauth token.");
       } else {
         user = data.id;
       }
     });
 
     $('#playlist-button').click(createNewPlaylist);
+
+    // Tell Tableau we'd like to initialize our extension
+    tableau.extensions.initializeAsync().then(function () {
+      // Once the extension is initialized, ask the user to choose a sheet
+      showChooseSheetDialog();
+      initializeButtons();
+    });
   });
 
   // Creates new Spotify playlist, and calls method to populate it with songs

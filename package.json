@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"descriptions": "Sample extension to use with Tableau and Spotify.",
 	"scripts": {
-		"start": "node node_modules/http-server/bin/http-server -p 8457",
+		"start": "node app.js",
 		"lint": "semistandard"
 	},
 	"repository": {
@@ -13,7 +13,14 @@
 	"author": "shinchris",
 	"license": "MIT",
 	"dependencies": {
-		"http-server": "^0.9.0"
+		"cookie-parser": "1.3.2",
+		"es6-promise": "^3.3.1",
+		"express": "~4.0.0",
+		"jquery": "^3.1.0",
+		"querystring": "~0.2.0",
+		"request": "~2.34.0",
+		"spotify-web-api-js": "^0.19.3",
+		"underscore": "^1.8.3"
 	},
 	"devDependencies": {
 		"semistandard": "^11.0.0"
